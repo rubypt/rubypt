@@ -28,9 +28,9 @@ title: Comunidade Portuguesa de Ruby
         <h3>Exemplos</h3>
         <ul class='thumbnails'>
           <li class='span2'>
-            <a class='thumbnail' href='http://pt.invoicexpress.com/' target='_new'>
-              <img src='/images/thumb/ruby1.png'>
-            </a>
+            <% link_to "http://pt.invoicexpress.com/", class: "thumbnail", target: "_new" do %>
+              <%= image_tag '/images/thumb/ruby1.png' %>
+            <% end %>
           </li>
           <li class='span2'>
             <a class='thumbnail' href='http://www.coworklisboa.pt' target='_new'>
