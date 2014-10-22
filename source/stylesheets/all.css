@@ -56,6 +56,9 @@ a.thumbnail:hover {border-color: #AF2330;}
   }
   .intercept hr, #footer hr{border-top: 1px solid #ccc;}
 
+.meetup-widget {
+  text-align: middle;
+}
 
 /* FOOTER STYLES */
 
