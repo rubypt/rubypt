@@ -1,0 +1,65 @@
+---
+title: Comunidade Portuguesa de Ruby
+meetups:
+  - [
+      "Porto.rb",
+      "http://meetup.com/porto-rb",
+      "http://photos2.meetupstatic.com/photos/event/2/0/f/a/global_223328442.jpeg"
+    ]
+  - [
+      "Minho.rb",
+      "http://meetup.com/minho-rb",
+      "http://photos1.meetupstatic.com/photos/event/9/a/5/8/global_209679512.jpeg"
+    ]
+  - [
+      "Coimbra.rb",
+      "http://meetup.com/coimbra-rb",
+      "http://img2.meetupstatic.com/img/8308650022681532654/header/logo-2x.png"
+    ]
+  - [
+      "Ruby e Rails Lisboa",
+      "http://meetup.com/ruby-lx",
+      "http://photos1.meetupstatic.com/photos/event/6/d/4/e/global_95907982.jpeg"
+    ]
+---
+
+%header.top-header
+  .container
+    %h1
+      =link_to "/" do
+        =image_tag "logo.png", alt: "Logótipo da Comunidade Portuguesa de Ruby", height: "26"
+        Comunidade Portuguesa de Ruby
+
+%section.landing-section
+  .container
+    .row
+      .col-md-6
+        %h2 Estamos em vários sítios do país.
+
+        %p
+          Se és novo na comunidade e não sabes para onde te virar, podemos-te
+          ajudar. Existem várias subcomunidades a que te podes juntar para
+          conheceres pessoas perto de ti.
+
+      .col-md-6
+        %ul.list-unstyled
+          -current_page.data.meetups.each do |meetup|
+            %li.col-md-3.col-sm-3.col-xs-6
+              %p
+                =link_to meetup[1] do
+                  =image_tag meetup[2], width: "90"
+              =link_to meetup[0], meetup[1]
+
+%footer.main-footer
+  .container
+    .row
+      %p.col-md-6=link_to "Ruby Portugal", "/"
+      %ul.col-md-6.text-right.list-inline
+        %li
+          =link_to "https://groups.google.com/group/ruby-pt" do
+            %i.fa.fa-envelope
+            Mailing List
+        %li
+          =link_to "https://github.com/rubypt" do
+            %i.fa.fa-github
+            GitHub

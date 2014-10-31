@@ -1,0 +1,17 @@
+!!! 5
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    / Use title if it's in the page YAML frontmatter
+    %title= current_page.data.title || "Comunidade Portuguesa de Ruby"
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "Comunidade Portuguesa de Ruby.", :name => "description"}/
+    %meta{:content => "Ruby PT", :name => "author"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    /[if lt IE 9]
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    %link{href: image_path("logo.png"), rel: "icon", type: "image/png"}
+    = stylesheet_link_tag "all"
+    = javascript_include_tag  "all"
+  %body{:class => page_classes}
+    = yield
