@@ -21,6 +21,27 @@ meetups:
       "http://meetup.com/ruby-lx",
       "http://photos1.meetupstatic.com/photos/event/6/d/4/e/global_95907982.jpeg"
     ]
+companies:
+  - [
+      "Imaginary Cloud",
+      "http://imaginarycloud.pt",
+      "http://www.imaginarycloud.com/assets/valueIC@2x-6a27dd7ef61257c031b5d450ad025598.png"
+    ]
+  - [
+      "Group Buddies",
+      "http://groupbuddies.com",
+      "http://www.groupbuddies.com/logo.png"
+    ]
+  - [
+      "Runtime Revolution",
+      "http://runtime-revolution.com",
+      "https://pbs.twimg.com/profile_images/509746046436528128/8R4b87qc.png"
+    ]
+  - [
+      "Think Orange",
+      "http://thinkorange.pt",
+      "https://pbs.twimg.com/profile_images/378800000479189380/89233712e2a7c7bed40f407d86ec9a39.png"
+    ]
 ---
 
 %header.top-header
@@ -49,6 +70,20 @@ meetups:
                 =link_to meetup[1] do
                   =image_tag meetup[2], width: "90"
               =link_to meetup[0], meetup[1]
+
+%section.landing-section
+  .container
+    .row
+      .col-md-12.text-center
+        %h2 Existem várias empresas que trabalham em Ruby.
+
+        %p Se procuras com quem desenvolver software em Ruby, junta-te a uma!
+
+        %ul.list-inline.list-ruby-companies
+          -current_page.data.companies.each do |company|
+            %li
+              =link_to company[1] do
+                =image_tag company[2], alt: company[0], title: company[0]
 
 %footer.main-footer
   .container

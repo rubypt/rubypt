@@ -27,3 +27,21 @@ $brand-primary: #8b1212
     margin: 0
     a
       vertical-align: center
+
+.list-ruby-companies
+  margin: 3em 0
+  &:hover
+    img
+      opacity: .2
+  li
+    margin-right: 1em
+  img
+    transition-duration: .3s
+    opacity: .5
+    filter: grayscale(.7)
+    -webkit-filter: grayscale(.7)
+    max-height: 70px
+    &:hover
+      opacity: 1
+      filter: grayscale(0)
+      -webkit-filter: grayscale(0)
